@@ -1,0 +1,36 @@
+<div class="container">
+    <h3>Sistema Transito</h3>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Identificación</th>
+            <th scope="col">correo</th>
+            <th scope="col">contraseña</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let usuario of usuarios">
+            <th scope="row">{{usuario.idUsuario}}</th>
+            <td>{{usuario.nombre}}</td>
+            <td>{{usuario.apellido}}</td>
+            <td>{{usuario.identificacion}}</td>
+            <td>{{usuario.correo}}</td>
+            <td>{{usuario.contrasena}}</td>
+            <td class="text-center">
+                <div>
+                    <button (click)="editarUsuario(usuario.idUsuario)" class="btn btn-warning btn-sm me-3">
+                        Editar
+                    </button>
+                    <button (click)="eliminarUsuario(usuario.idUsuario)" class="btn btn-danger btn-sm me-3">
+                      Eliminar
+                  </button>
+                </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>

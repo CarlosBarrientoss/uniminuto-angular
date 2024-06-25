@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="container">
+        <div class="container text-center" style="margin: 30px;">
+            <h3>Agregar Usuario</h3>
+        </div>    
+        <form (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" required="true" 
+              [(ngModel)]="usuario.nombre">
+            </div>
+            <div class="mb-3">
+              <label for="apellido" class="form-label">Apellido</label>
+              <input type="text" class="form-control" step="any" 
+              id="apellido"  name="apellido" [(ngModel)]="usuario.apellido">
+            </div>
+            <div class="mb-3">
+                <label for="identificacion" class="form-label">Identificación</label>
+                <input type="number" class="form-control" 
+                id="identificacion" name="identificacion" [(ngModel)]="usuario.identificacion">
+              </div>
+              <div class="mb-3">
+                <label for="correo" class="form-label">Correo</label>
+                <input type="text" class="form-control" step="any" 
+                id="correo"  name="correo" [(ngModel)]="usuario.correo">
+              </div>
+              <div class="mb-3">
+                <label for="contrasena" class="form-label">Contraseña</label>
+                <input type="text" class="form-control" step="any" 
+                id="contrasena"  name="contrasena" [(ngModel)]="usuario.contrasena">
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-warning btn-sm me-3">Agregar</button>
+                <a href="/" class="btn btn-danger btn-sm">Regresar</a>
+              </div>            
+          </form>
+    </div>
+</div>
+
